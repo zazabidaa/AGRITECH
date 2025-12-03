@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGRITS Website</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <!-- LOGO INSTANSI -->
+      <img src="its.png" alt="Logo Instansi" class="logo-instansi" />
+      <!-- LOGO AGRITS KECIL -->
+      <img src="agritech.png" alt="Logo AGRITS" class="logo-small" />
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#informasi">Informasi</a></li>
+      <li><a href="#peta">Peta Kesehatan</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-center">
+      <img src="agritech.png" alt="agritech.png" class="logo-hero" />
+      <h1 class="hero-title">Pemantauan Kondisi Lahan Pertanian Menggunakan Citra Sentinel-2 dan Himawari-9</h1>
+      <p class="hero-desc">Dikembangkan oleh Kelompok 4</p>
+    </div>
+  </section>
+
+  <!-- SECTION TENTANG -->
+  <section id="tentang" class="section">
+    <h2 class="section-title">Tentang AGRITECH</h2>
+    <p class="section-text">
+      AGRITECH (Agricultural Remote-sensing and Information Technology System) merupakan 
+      sebuah platform yang dikembangkan untuk mendukung kegiatan Kelompok Petani Sendang Biru
+      Made. Sistem ini berfungsi sebagai media penyedia informasi penting terkait kondisi 
+      lahan dan tanaman, seperti tingkat kekeringan, status kesehatan tanaman padi, suhu tanah, 
+      serta data curah hujan. Melalui pemanfaatan teknologi penginderaan jauh dan sistem informasi, 
+      laman ini diharapkan dapat membantu petani dalam mengambil keputusan yang lebih tepat dan 
+      efisien dalam pengelolaan usaha tani mereka.
+    </p>
+  </section>
+
+  <!-- SECTION PETA KESEHATAN -->
+  <section id="peta" class="section">
+   <h2 class="section-title">Peta Kesehatan Padi</h2>
+   <p class="section-text">
+    Berikut adalah visualisasi peta kesehatan tanaman padi berbasis citra satelit .
+   </p>
+
+   <!-- EMBED GEE APP -->
+   <div class="peta-wrapper">
+    <iframe 
+      src="https://ee-teamduabelas1212.projects.earthengine.app/view/demo"
+      width="100%"
+      height="500"
+      style="border:none; border-radius: 15px;"
+     allowfullScreen >
+    </iframe>
+   </div>
+   <ul class="section-list">
+    <li>
+       NDVI (Normalized Difference Vegetation Index) atau indeks vegetasi
+       NDVI digunakan untuk melihat tingkat kehijauan tanaman. Nilai NDVI yang tinggi menunjukkan tanaman sehat, hijau, dan memiliki fotosintesis yang baik. Nilai rendah dapat menandakan tanaman stres, tanah kosong, atau kondisi pertumbuhan yang buruk.
+    </li>
+    <li>  
+       NDWI (Normalized Difference Water Index) atau Indeks Kelembapan
+       NDWI menunjukkan kandungan air pada vegetasi dan permukaan tanah. Nilai tinggi berarti area memiliki kelembapan yang cukup, sedangkan nilai rendah mengindikasikan kondisi kering atau kekurangan air.
+    </li>
+    <li>   
+       NDMI (Normalized Difference Moisture Index) atau Indeks Kekeringan
+       NDMI digunakan untuk memantau kadar air dalam vegetasi. Nilai NDMI rendah menandakan tanaman mengalami kekeringan atau stres air. Nilai tinggi menunjukkan kondisi vegetasi yang cukup lembap dan sehat.
+    </li>
+    <li>   
+      LST (Land Surface Temperature) atau Suhu Permukaan
+      LST menunjukkan suhu permukaan tanah/vegetasi. Suhu tinggi dapat mengindikasikan kekeringan, panas ekstrem, atau gangguan pertumbuhan tanaman. Suhu rendah biasanya menunjukkan kondisi yang lebih lembap atau vegetasi sehat.
+    </li>
+    <li>  
+       CHIRPS  (Curah Hujan)
+       CHIRPS memberikan informasi curah hujan harian/bulanan berbasis data satelit. Nilai curah hujan yang tinggi menunjukkan potensi tanah lebih lembap, sedangkan nilai rendah menunjukkan risiko kekeringan.
+    </li>
+    <li>   
+      HIMAWARI (Curah Hujan) (Real-time)
+      Data curah hujan dari satelit Himawari memberikan informasi hujan hampir real-time. Berguna untuk memantau kondisi cuaca harian seperti intensitas hujan, potensi banjir, atau kekeringan jangka pendek.
+     </li>
+    </ul;>
+  </section>
+
+  <!-- SECTION INFORMASI (DENGAN CARD YANG BISA DIKLIK) -->
+  <section id="informasi" class="section">
+    <h2 class="section-title">Informasi</h2>
+
+    <div class="card-container">
+      <!-- Card 1 -->
+      <div class="card" onclick="toggleCard(1)">
+        <h3 class="card-title">Tips Menjaga Kesehatan Padi</h3>
+        <p class="card-content" id="content1">
+          Pemilihan benih berkualitas menjadi langkah awal yang sangat penting dalam budidaya padi. 
+          Petani dianjurkan menggunakan benih bersertifikat dari lembaga resmi, seperti Balai Benih 
+          Padi Nasional, untuk menjamin kemurnian genetik serta daya tumbuh yang optimal. Pengujian 
+          sederhana dapat dilakukan dengan merendam benih dalam larutan air garam, karena benih yang 
+          mengapung menandakan benih hampa atau tidak layak tanam. Selain itu, pengendalian hama dan 
+          penyakit juga harus diperhatikan. Hama wereng batang cokelat, misalnya, biasanya ditandai 
+          dengan gejala daun menguning dan tanaman menjadi kerdil, sehingga penggunaan varietas tahan 
+          seperti Ciherang atau Inpari serta penghindaran pemupukan nitrogen berlebihan dapat menjadi 
+          solusi efektif. Pada penyakit blas yang disebabkan oleh Magnaporthe oryzae, gejala berupa 
+          bercak daun menyerupai mata ikan dapat dikendalikan melalui rotasi tanaman dan penggunaan 
+          fungisida berbahan aktif tricyclazole. Pemupukan berimbang juga menjadi faktor penting bagi 
+          pertumbuhan tanaman padi. Analisis tanah perlu dilakukan sebelum pemupukan untuk mengetahui 
+          kebutuhan hara, kemudian pengaplikasian pupuk organik seperti kompos atau pupuk kandang dapat 
+          membantu memperbaiki struktur tanah. Pupuk anorganik seperti NPK diberikan sesuai fase 
+          pertumbuhan, yaitu nitrogen lebih tinggi pada fase vegetatif dan fosfor serta kalium lebih 
+          tinggi pada fase generatif. Pengelolaan air yang efisien dapat dilakukan dengan menerapkan 
+          sistem intermitten irrigation atau pengairan berselang, yang mampu mengurangi risiko penyakit 
+          akar serta menghemat air hingga 30%, dengan menjaga ketinggian genangan air tidak lebih dari 5 cm. 
+          Terakhir, rotasi tanaman juga diperlukan untuk memutus siklus hidup hama dan penyakit, misalnya 
+          dengan menanam palawija seperti kedelai atau jagung. Penggunaan tanaman penutup tanah dari kelompok 
+          kacang-kacangan pun dapat membantu memperbaiki kandungan nitrogen di dalam tanah sehingga mendukung 
+          kesuburan lahan.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card" onclick="toggleCard(2)">
+        <h3 class="card-title">Jenis-Jenis Padi</h3>
+        <p class="card-content" id="content2">
+          Padi varietas unggul, baik hibrida maupun inbrida, merupakan hasil program pemuliaan tanaman yang 
+          bertujuan untuk meningkatkan produktivitas, ketahanan terhadap hama, serta kemampuan beradaptasi 
+          terhadap kondisi lingkungan tertentu. Beberapa varietas yang umum digunakan antara lain Ciherang, 
+          yang menghasilkan beras putih bertekstur pulen dengan potensi hasil 6 sampai 8 ton per hektare serta 
+          memiliki ketahanan terhadap wereng cokelat dan cocok untuk lahan sawah beririgasi. Varietas IR64 
+          dikenal memiliki umur panen sekitar 110 sampai 115 hari dan toleran terhadap kekeringan, meskipun cukup 
+          rentan terhadap wereng batang cokelat. Sementara itu, Inpari 32 menjadi pilihan karena produktivitasnya 
+          yang tinggi, mencapai 8 sampai 9 ton per hektare, serta ketahanannya terhadap penyakit blas dan hawar 
+          daun bakteri. Selain varietas unggul, terdapat pula padi lokal atau tradisional seperti Pandan Wangi 
+          yang memiliki aroma khas dan bernilai premium dengan hasil 4 sampai 5 ton per hektare, serta Rojolele 
+          yang terkenal sangat pulen dan sering dijadikan bahan nasi liwet, meskipun cukup rentan terhadap serangan 
+          penggerek batang. Untuk sistem pertanian organik, beberapa varietas yang banyak dibudidayakan di antaranya 
+          Mentik Wangi, yaitu beras merah yang kaya antioksidan dengan hasil 3 sampai 4 ton per hektare, serta Sri Nyonya 
+          yang merupakan varietas beras putih organik dan memiliki pasar ekspor. Di sisi lain, varietas padi hibrida 
+          seperti Intani 2 mampu menghasilkan 10 sampai 12 ton per hektare dan diketahui tahan terhadap wereng cokelat, 
+          meskipun benihnya tidak dapat ditanam ulang. Varietas Bernas Prima juga menjadi alternatif yang baik karena 
+          memiliki performa produksi yang stabil terutama pada lahan-lahan suboptimal.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION KONTAK -->
+  <section id="kontak" class="section">
+    <h2 class="section-title">Kontak</h2>
+    <p>Email: agritech@gmail.com</p>
+    <p>Telepon: 0813-3518-5651</p>
+    <p>Alamat: Jalan Teknik Sipil No 20, Keputih, Sukolilo, Surabaya</p>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>

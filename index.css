@@ -1,0 +1,176 @@
+/* AGRITS Website Styles */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Mulish:wght@300;600;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Mulish', sans-serif;
+
+  background: 
+    linear-gradient(to bottom, rgba(0,0,0,0.6), #1f5f46 60%, #3a8f6e),
+    url('back.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  color: white;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-instansi {
+  width: 45px;
+  height: auto;
+}
+
+.logo-small {
+  width: 60px;
+  opacity: 0.9;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin-right: 60px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d7ae2f;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 80px;
+}
+
+.hero-center {
+  z-index: 2;
+  animation: fadeIn 1.5s ease;
+}
+
+.logo-hero {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.hero-desc {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* SECTION */
+.section {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.section-list {
+  text-align: justify;
+  margin-bottom: 8 px;
+  line-height: 1.6;
+   margin-top: 8 px;
+}
+/* PETA SECTION */
+.peta-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.peta-img {
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* CARD */
+.card-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.card-content {
+  display: none;
+  margin-top: 10px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
